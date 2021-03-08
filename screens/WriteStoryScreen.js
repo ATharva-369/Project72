@@ -26,59 +26,59 @@ export default class WriteScreen extends React.Component {
 
     render() {
         return (
+             <ScrollView >
             <KeyboardAvoidingView>
-                <ScrollView >
-                    {/* <Text style={{textAlign:'center',marginTop:'26%',fontSize:30,color:'lightblue'}}>Hi this is write screen</Text> */}
-                    <Header
-                        backgroundColor={'yellow'}
-                        centerComponent={{
-                            text: "Story Hub",
-                            style: { color: 'blue', fontSize: 20 },
-                        }}
-                    />
-                    <TextInput
-                        placeholder="Enter your full name please"
-                        style={style.input}
-                        onChangeText={(text) => this.setState({
-                            name: text
-                        })}
-                    />
-                    <TextInput
-                        placeholder="Enter title of story"
-                        style={style.input}
-                        onChangeText={(text) => this.setState({
-                            title: text
-                        })}
-                    />
-                    <TextInput
-                        placeholder="Enter author of story"
-                        style={style.input}
-                        onChangeText={(text) => this.setState({
-                            author: text
-                        })}
+                {/* <Text style={{textAlign:'center',marginTop:'26%',fontSize:30,color:'lightblue'}}>Hi this is write screen</Text> */}
+                <Header
+                    backgroundColor={'yellow'}
+                    centerComponent={{
+                        text: "Story Hub",
+                        style: { color: 'blue', fontSize: 20 },
+                    }}
+                />
+                <TextInput
+                    placeholder="Enter your full name please"
+                    style={style.input}
+                    onChangeText={(text) => this.setState({
+                        name: text
+                    })}
+                />                
+                <TextInput
+                    placeholder="Enter title of story"
+                    style={style.input}
+                    onChangeText={(text) => this.setState({
+                        title: text
+                    })}
+                />
+                <TextInput
+                    placeholder="Enter author of story"
+                    style={style.input}
+                    onChangeText={(text) => this.setState({
+                        author: text
+                    })}
 
-                    />
-                    <TextInput
-                        multiline={true}
-                        placeholder="Write story"
-                        style={{
-                            marginTop: '6%',
-                            width: '80%',
-                            alignSelf: 'center',
-                            textAlign: 'center',
-                            borderWidth: 4,
-                            height: 500,
-                        }}
-                        onChangeText={(text) => this.setState({
-                            story: text
-                        })} />
-                    <TouchableOpacity style={{ backgroundColor: 'yellow', marginLeft:'25%', height: 50, width: '50%' }} onPress={this.sumbitButton}>
-                        <Text style={{ color: 'blue', textAlign: 'center', fontSize: 15,textAlignVertical:'center'}}>Submit</Text>
-                    </TouchableOpacity>
+                />
+                <TextInput
+                    multiline={true}
+                    placeholder="Write story"
+                    style={{
+                        marginTop: '6%',
+                        width: '80%',
+                        alignSelf: 'center',
+                        textAlign: 'center',
+                        borderWidth: 4,
+                        height: 500,
+                    }}
+                    onChangeText={(text) => this.setState({
+                        story: text
+                    })} />
+                <TouchableOpacity style={{}} onPress={this.sumbitButton}>
+                    <Text>Submit</Text>
+                </TouchableOpacity>    
 
 
-                </ScrollView>
             </KeyboardAvoidingView>
+             </ScrollView>
         );
     }
 }
